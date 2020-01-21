@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const UserRoutes= require('./routes/user');
 
+
 app.use('/api/users', UserRoutes)
 mongoose.connect('mongodb://localhost:27017/')
     .then(result => {
@@ -24,4 +25,3 @@ mongoose.connect('mongodb://localhost:27017/')
       console.log(`Server is running on http://localhost:7000`);
     })
     .catch(err => console.log(err));
-console.log('server running')
